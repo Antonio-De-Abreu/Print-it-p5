@@ -16,3 +16,9 @@ const slides = [
 		"tagLine": "Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+
+// Create the banner withJS
+document.addEventListener('DOPMcontentLoaded', function () {
+	const bannerDiv = document.querySelector('#banner');
+	let currentIndex = 0;
+});
