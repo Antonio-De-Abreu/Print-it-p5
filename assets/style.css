@@ -93,7 +93,7 @@ header {
 }
 
 .btn {
-	background-color: var(--primary-color) ;
+	background: rgb(116, 116, 250);
 	padding: 16px 32px;
 	margin-inline:5px;
 	border-radius: 5px;
@@ -122,33 +122,92 @@ header {
 	object-position: center;
 }
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
+
+
+.carousel {
+	height: 40vh;
+	width: 100vw;
+	position: relative;
+}
+
 /* Gestion des fleches du carrousel */
-#banner .arrow {
+
+.carousel button {
 	position: absolute;
-}
-
-#banner .arrow_left {
-		left: 10px;
-		cursor: pointer;
-}
-
-#banner .arrow_right {
-		right: 10px;
-		cursor: pointer;
-}
-
-.slide {
+	background: none;
+	border: none;
+	outline: none;
+	font-size: 5rem;
+	z-index: 2;
+	cursor: pointer;
+	color: rgb(243, 241, 241);
+	transform: translate(-50%);
+	top: 50%;
+  }
+  #prev {
+	z-index: 1;
+    position: absolute;
+	top: 50%;
+    left: 46px;
+    cursor: pointer;
+  }
+  
+  #next {
+	z-index: 1;
+    position: absolute;
+	top: 50%;
+    right: 26px;
+    cursor: pointer;
+  }
+  .carousel li {
+	list-style: none;
+  }
+  .slide {
 	position: absolute;
+	height: 100%;
 	width: 100%;
-	height: auto;
+	opacity: 0;
+	transition: 0.5s ease-in-out;
+	-webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-ms-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+  }
+  .slide.active {
+	opacity: 1;
+  }
+ 
 
-}
+  .carousel li {
+	list-style: none;
+  }
+  .slide {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: 0.5s ease-in-out;
+	-webkit-transition: 0.5s ease-in-out;
+	-moz-transition: 0.5s ease-in-out;
+	-ms-transition: 0.5s ease-in-out;
+	-o-transition: 0.5s ease-in-out;
+  }
+  .slide.active {
+	opacity: 1;
+  }
+  .slide img {
+	display: block;
+	width: 100%;
+	height: 479px;
+	object-fit: cover;
+  }
 
 /* Gestion des points du carrousel */
 .dots {
 	position: absolute;
-	bottom: 40px;
-	display: flex;
+	margin: auto;
+    left: 968px;
+    display: flex;
 }
 .dot {
 	margin-inline: 5px;
@@ -163,6 +222,12 @@ header {
 	background-color: #fff;
 }
 /* Fin du code CSS pour le carousel */
+
+aside {
+    position: relative;
+    top: 40px;
+}
+
 #banner p {
 	font-family: 'Roboto Slab', sans-serif;
 	font-weight: 900;
